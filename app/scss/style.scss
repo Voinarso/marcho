@@ -4,6 +4,7 @@
 @import 'global';
 
 
+
 .header {
    padding: 40px 0;
 
@@ -71,27 +72,132 @@
    }
 }
 
+.footer {
+   background-color: $bg;
+}
+
+.footer-top {
+   padding: 70px 0 40px;
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid #ececec;
+
+   &__contact {
+      width: 250px;
+      margin-right: 50px;
+   }
+
+   &__nav {
+      width: 170px;
+      margin-right: 30px;
+   }
+
+   &__item-form {
+      max-width: 470px;
+   }
+
+   &__logo {
+      display: block;
+      margin-bottom: 40px;
+   }
+
+   &__addres,
+   &__email,
+   &__phone {
+      display: block;
+      margin-bottom: 14px;
+   }
+
+   &__title {
+      margin-bottom: 47px;
+      color: $title;
+      @extend %roboto-400;
+      font-size: 22px;
+      line-height: 100%;
+   }
+
+   &__link {
+      display: block;
+      margin-bottom: 14px;
+   }
+
+   &__social-list {
+      display: flex;
+      margin-top: 30px;
+      align-items: center;
+   }
+
+   &__social-item+.footer-top__social-item {
+      margin-left: 18px;
+   }
+
+   &__social-link {
+      transition: all .5s;
+
+      path {
+         fill: $default;
+      }
+
+      &:hover {
+         path {
+            fill: $accent;
+         }
+      }
+   }
+
+   &__text {
+      margin-bottom: 30px;
+   }
+
+   &__form-input {
+      background-color: #fff;
+      border: none;
+      max-width: 320px;
+      width: 100%;
+      padding: 12px 10px 12px 15px;
+      margin-right: 10px;
+      box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
 
 
+      &::placeholder {
+         color: $default;
+         font-size: 16px;
+         line-height: 36px;
+         @extend %quicksand-500;
+      }
+   }
+
+   &__form-btn {
+      background-color: $accent;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+      cursor: pointer;
+   }
+}
 
 
-.header__inner {}
+.footer-bottom {
+   height: 75px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 12px;
 
-.logo {}
+   &__accept {
+      display: flex;
+      align-items: center;
+   }
 
-.logo__img {}
+   &__accept-img {
+      display: inline-block;
+      margin-left: 25px;
 
-.menu__list {}
-
-.menu__list-item {}
-
-.menu__list-link {}
-
-
-
-.user-nav__link {}
-
-.user-nav__num {}
+   }
+}
 
 
 
